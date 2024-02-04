@@ -13,3 +13,5 @@ Here's what it can do:
 * Users can visit the Checkout Page and enter their information afterwards
 
 DummyJS Link https://dummyjson.com/
+
+![Screenshot (14)](https://github.com/schinak-m/e-commerce/assets/126258374/97c5530f-e242-42d6-8270-df9f1b98c242)
