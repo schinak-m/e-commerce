@@ -2,14 +2,14 @@
     <!-- Hero Section -->
     <v-parallax src="https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI"
         height="500">
-        <div class="d-flex flex-column fill-height justify-center align-center text-white">
-            <h1 class="text-h3 font-bold">
+        <div class="flex flex-column fill-height justify-center align-center text-white">
+            <h1 class="text-h4 lg:text-h3 text-center font-bold drop-shadow-[0_3px_3px_rgba(0,0,0,0.9)]">
                 Choose from our best Products
             </h1>
             <div class="flex items-center justify-center mt-6 mb-4">
                 <router-link :to="{ name: 'AllProducts' }" class="w-full">
                     <button
-                        class="hover:animate-bounce w-full py-2 px-10 text-lg font-medium text-blue-500 border border-slate-900 rounded-sm dark:text-gray-200 bg-slate-800 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        class="hover:animate-pulse w-full my-3 py-2 px-10 text-lg font-medium text-blue-500 border border-slate-900 rounded-sm dark:text-gray-200 bg-slate-800 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                         Shop Now
                     </button>
                 </router-link>
@@ -18,14 +18,14 @@
     </v-parallax>
 
     <!-- Services and Features -->
-    <div class="w-100 mx-auto px-6 sm:max-w-2xl md:max-w-3xl md:px-12 lg:max-w-5xl xl:max-w-7xl xl:px-32 mb-10">
+    <div class="w-100 mx-auto mt-3 px-6 max-w-2xl md:max-w-3xl md:px-12 lg:max-w-5xl xl:max-w-7xl xl:px-32 mb-10">
         <div class="text-center">
             <div
                 class="block rounded-lg bg-[hsla(0,0%,91%,0.50)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,91%,0.70)] dark:shadow-black/20 md:py-16 md:px-12 mt-[-170px] backdrop-blur-[30px]">
                 <div class="py-2 lg:py-10 mx-auto max-w-screen-xl px-4">
                     <div
-                        class="flex flex-row justify-center gap-8 text-gray-500 sm:gap-12 md:grid-cols-1 lg:grid-cols-3 dark:text-gray-400">
-                        <div class="basis-1/3">
+                        class="flex lg:flex-row md:flex-row flex-col justify-center gap-8 text-gray-500 grid-cols-1 lg:grid-cols-3 dark:text-gray-400">
+                        <div class="lg:basis-1/3">
                             <div class="w-full">
                                 <div class="flex justify-center">
                                     <svg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@
                                     to wait too long for your order!</p>
                             </div>
                         </div>
-                        <div class="basis-1/3">
+                        <div class="lg:basis-1/3">
                             <div class="w-full">
                                 <div class="flex justify-center">
                                     <svg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
@@ -65,7 +65,7 @@
                                     something else or return it.</p>
                             </div>
                         </div>
-                        <div class="basis-1/3 ">
+                        <div class="lg:basis-1/3 ">
                             <div class="w-full">
                                 <div class="flex justify-center">
                                     <svg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
@@ -96,7 +96,7 @@
             <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
                 <div class="-m-1 flex flex-wrap md:-m-2">
                     <div class="flex xl:w-1/2 md:w-full flex-wrap">
-                        <div class="w-1/2 p-1 md:p-2">
+                        <div class="lg:w-1/2 md:w-1/2 w-full p-1 md:p-2">
                             <figure
                                 class="w-full h-full relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale">
                                 <a href="#">
@@ -112,7 +112,7 @@
                                 </router-link></figcaption>
                             </figure>
                         </div>
-                        <div class="w-1/2 p-1 md:p-2">
+                        <div class="lg:w-1/2 md:w-1/2 w-full p-1 md:p-2">
                             <figure
                                 class="w-full h-full relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale">
                                 <a href="#">
@@ -165,7 +165,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="w-1/2 p-1 md:p-2">
+                        <div class="lg:w-1/2 md:w-1/2 w-full p-1 md:p-2">
                             <figure
                                 class="w-full h-full relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale">
                                 <a href="#">
@@ -182,7 +182,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div class="w-1/2 p-1 md:p-2">
+                        <div class="lg:w-1/2 md:w-1/2 w-full p-1 md:p-2">
                             <figure
                                 class="w-full h-full relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale">
                                 <a href="#">

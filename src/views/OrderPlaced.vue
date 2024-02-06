@@ -1,5 +1,5 @@
 <template>
-    <div className="h-full w-full p-10 m-10 flex flex-col items-center justify-center">
+    <div className="h-full w-full p-10 lg:m-10 flex flex-col items-center justify-center">
         <svg width='100' height='100' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
             xmlns:xlink='http://www.w3.org/1999/xlink' class="mb-3">
             <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />

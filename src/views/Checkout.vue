@@ -1,33 +1,33 @@
 <template>
     <div class="container mx-auto p-5 bg-slate-100">
-        <div class="flex shadow-md my-7 mx-15">
-            <div class="w-2/4 bg-white px-10 py-10">
+        <div class="flex lg:flex-row flex-col shadow-md my-7 lg:mx-15">
+            <div class="lg:w-2/4 w-full bg-white px-10 py-10">
                 <div class="border-b pb-8">
                     <h1 class="font-semibold text-2xl">Order Summary</h1>
                     <p class="text-gray-400">Check your items. And select a suitable shipping method.</p>
                 </div>
 
-                <div class="flex mt-10 mb-5">
-                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
+                <div class="lg:flex md:flex hidden mt-10 mb-5">
+                    <h3 class="font-semibold text-gray-600 text-xs uppercase md:w-2/5 lg:w-2/5">Product Details</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase md:w-1/5 w-1/5">Quantity</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase md:w-1/5 w-1/5">Price</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase md:w-1/5 w-1/5">Total</h3>
                 </div>
 
                 <!-- Items -->
-                <div v-for="product in cart" class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                    <div class="flex w-2/5">
-                        <div class="w-20">
-                            <img class="h-24" :src="product.thumbnail" alt="">
+                <div v-for="product in cart" class="flex lg:flex-row md:flex-row flex-col items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+                    <div class="flex text-center lg:text-left lg:flex-row md:flex-row flex-col w-full md:w-2/5 lg:w-2/5 items-center">
+                        <div class="lg:w-24 md:w-28">
+                            <img class="lg:h-24 md:h-24" :src="product.thumbnail" alt="">
                         </div>
-                        <div class="flex flex-col justify-between ml-4 flex-grow">
-                            <span class="font-bold text-sm">{{ product.title }}</span>
-                            <span class="text-red-500 text-xs">{{ product.brand }}</span>
+                        <div class="flex flex-col justify-between lg:ml-4 md:ml-2 flex-grow my-3 py-3">
+                            <span class="font-bold lg:text-lg md:text-sm text-xl">{{ product.title }}</span>
+                            <span class="text-red-500 md:text-xs lg:text-xs text-sm">{{ product.brand }}</span>
                             <a @click="remove(product)"
                                 class="cursor-pointer font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                         </div>
                     </div>
-                    <div class="flex justify-center w-1/5">
+                    <div class="flex lg:justify-center justify-center items-center w-full md:w-1/5 lg:w-1/5">
                         <svg @click="decreaseQuantity(product)" class="fill-current text-gray-600 w-3 cursor-pointer"
                             viewBox="0 0 448 512">
                             <path
@@ -42,8 +42,11 @@
                                 d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                         </svg>
                     </div>
-                    <span class="text-center w-1/5 font-semibold text-sm">${{ product.price }}</span>
-                    <span class="text-center w-1/5 font-semibold text-sm">${{ product.price * product.quantity }}</span>
+                    <div></div>
+                    <span class="lg:hidden md:hidden w-full py-2 text-gray-700 text-center text-xl">Price</span>
+                    <span class="text-center md:text-center w-full md:w-1/5 lg:w-1/5 font-semibold lg:text-sm md:text-sm text-lg">${{ product.price }}</span>
+                    <span class="lg:hidden md:hidden w-full py-2 text-gray-700 text-center text-xl">Total</span>
+                    <span class="text-center md:text-center w-full md:w-1/5 lg:w-1/5 font-semibold lg:text-sm md:text-sm text-lg">${{ product.price * product.quantity }}</span>
                 </div>
 
                 <!-- back -->
@@ -58,7 +61,7 @@
             </div>
 
             <!-- Payment Details -->
-            <div id="summary" class="w-2/4 px-8 py-10 bg-gray-100">
+            <div id="summary" class="lg:w-2/4 w-full px-8 py-10 bg-gray-100">
                 <p class="text-xl font-medium">Payment Details</p>
                 <p class="text-gray-400">Complete your order by providing your payment details.</p>
                 <form @submit.prevent="submit">

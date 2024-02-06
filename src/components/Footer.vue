@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-white dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-2xl">
-      <div class="grid grid-cols-2 gap-8 mx-16 pl-16 py-6 lg:py-8 md:grid-cols-4">
+      <div class="grid grid-cols-1 gap-8 mx-16 lg:pl-20 md:pl-10 py-6 lg:py-8 md:grid-cols-4">
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
