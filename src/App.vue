@@ -1,10 +1,10 @@
 <template>
-    <navi />
+    <NavBar />
   <router-view />
 </template>
 
 <script setup>
-import navi from './components/nav.vue';
+import NavBar from './components/NavBar.vue';
 </script>
 
 <style scoped>
