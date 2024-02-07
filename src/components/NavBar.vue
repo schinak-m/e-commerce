@@ -33,7 +33,7 @@
           <li class="nav-item">
             <div class="relative inline-block text-left ">
               <div>
-                <button type="button" @mouseover.self="showDropDown()" 
+                <button type="button" @click="showDropDown()" 
                   class="inline-flex w-full justify-center gap-x-1 px-3 pt-1.5 items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
                   id="menu-button" aria-expanded="true" aria-haspopup="true">
                   Men/Women
