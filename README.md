@@ -14,4 +14,14 @@ Here's what it can do:
 
 DummyJS Link https://dummyjson.com/
 
-![Screenshot (14)](https://github.com/schinak-m/e-commerce/assets/126258374/97c5530f-e242-42d6-8270-df9f1b98c242)
+![Home Page](https://github.com/schinak-m/e-commerce/assets/126258374/73690efa-ea2c-4d78-be75-8d371317144a)
+![Home Page 2](https://github.com/schinak-m/e-commerce/assets/126258374/2a7d1517-4c49-4c7b-9861-c63a6aa4b1bd)
+
+
+## Setup
+
+Clone this Repository and run the following commands
+ ```
+npm install
+npm run dev
+```
