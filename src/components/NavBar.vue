@@ -109,7 +109,6 @@ import { ref } from 'vue'
 import SideBar from './SideBar.vue';
 
 export default {
-  name: "blueGray-navbar",
   setup() {
     const showMenu = ref(false);
     const show = ref(false);
