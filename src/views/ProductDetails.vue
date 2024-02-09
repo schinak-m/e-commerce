@@ -139,7 +139,7 @@ const product = ref({})
 const quantity = ref(1)
 const Image = ref('')
 
-function addToCart(product) {
+function addToCart(product, quantity) {
     store.commit('addToCart', { product, quantity })
 }
 
