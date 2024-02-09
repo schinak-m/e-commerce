@@ -113,6 +113,9 @@ function decreaseQuantity(product) {
     if (product.quantity > 0) {
         product.quantity--
     }
+    if(product.quantity <= 0){
+        remove(product)
+    }
 }
 
 function remove(product) {
