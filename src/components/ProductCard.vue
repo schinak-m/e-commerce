@@ -20,7 +20,8 @@
                 </div>
             </div>
             <button @click="addToCart(product, quantity)"
-                class="w-full cursor-pointer flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                class="w-full cursor-pointer flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                :class="{'bg-gray-700' : isClicked}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -36,6 +37,8 @@
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 
+const isClicked = ref(false)
+
 const { product } = defineProps({
     product: {
         required: true
@@ -46,6 +49,10 @@ const store = useStore()
 const quantity = ref(1)
 
 function addToCart(product, quantity) {
+    isClicked.value = true
+    setTimeout(() => {
+        isClicked.value = false;
+      }, 1000);
     store.commit('addToCart', { product, quantity })
 }
 

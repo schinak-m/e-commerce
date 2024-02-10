@@ -113,7 +113,8 @@
                             <div class="flex flex-wrap items-center -mx-4 ">
                                 <div class="w-full px-4 mb-4 lg:w-1/2 lg:mb-0">
                                     <button @click="addToCart(product, quantity)"
-                                        class="flex items-center justify-center w-full px-5 py-2.5 text-blue-500 border border-slate-900 rounded-md dark:text-gray-200 bg-slate-800 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                                        class="flex items-center justify-center w-full px-5 py-2.5 text-blue-500 border border-slate-900 rounded-md dark:text-gray-200 bg-slate-800 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                                        :class="{'bg-gray-700' : isClicked}">
                                         Add to Cart
                                     </button>
                                 </div>
@@ -138,8 +139,13 @@ const store = useStore()
 const product = ref({})
 const quantity = ref(1)
 const Image = ref('')
+const isClicked = ref(false)
 
 function addToCart(product, quantity) {
+    isClicked.value = true
+    setTimeout(() => {
+        isClicked.value = false;
+      }, 1000)
     store.commit('addToCart', { product, quantity })
 }
 
